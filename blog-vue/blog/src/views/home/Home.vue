@@ -14,26 +14,26 @@
         <!-- 联系方式 -->
         <div class="blog-contact">
           <a
-            v-if="isShowSocial('qq')"
-            class="mr-5 iconfont iconqq"
-            target="_blank"
-            :href="
+              v-if="isShowSocial('qq')"
+              class="mr-5 iconfont iconqq"
+              target="_blank"
+              :href="
               'http://wpa.qq.com/msgrd?v=3&uin=' +
                 blogInfo.websiteConfig.qq +
                 '&site=qq&menu=yes'
             "
           />
           <a
-            v-if="isShowSocial('github')"
-            target="_blank"
-            :href="blogInfo.websiteConfig.github"
-            class="mr-5 iconfont icongithub"
+              v-if="isShowSocial('github')"
+              target="_blank"
+              :href="blogInfo.websiteConfig.github"
+              class="mr-5 iconfont icongithub"
           />
           <a
-            v-if="isShowSocial('gitee')"
-            target="_blank"
-            :href="blogInfo.websiteConfig.gitee"
-            class="iconfont icongitee-fill-round"
+              v-if="isShowSocial('gitee')"
+              target="_blank"
+              :href="blogInfo.websiteConfig.gitee"
+              class="iconfont icongitee-fill-round"
           />
         </div>
       </div>
@@ -352,6 +352,7 @@ export default {
           cover = item.pageCover;
         }
       });
+
       return "background: url(" + cover + ") center center / cover no-repeat";
     }
   }
@@ -441,7 +442,7 @@ export default {
     transition: all 0.6s;
   }
   .article-card:hover .on-hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
   .article-wrapper {
     padding: 0 2.5rem;
@@ -572,7 +573,7 @@ export default {
   transition: all 0.5s;
 }
 .author-avatar:hover {
-  transform: rotate(360deg);
+  transform: rotate(180deg);
 }
 .web-info {
   padding: 0.25rem;

@@ -432,6 +432,7 @@ export default {
       }
       // 保存本地文章记录
       if (this.autoSave && this.article.id == null) {
+        //json对象转换成string对象
         sessionStorage.setItem("article", JSON.stringify(this.article));
       }
     },

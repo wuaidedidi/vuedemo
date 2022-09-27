@@ -5,7 +5,7 @@ import axios from "axios";
 import Vue from "vue";
 
 export function generaMenu() {
-  // 查询用户菜单
+  // 查询用户菜单 获取用户权限能获取的菜单
   axios.get("/api/admin/user/menus").then(({ data }) => {
     if (data.flag) {
       var userMenuList = data.data;
@@ -23,7 +23,7 @@ export function generaMenu() {
           });
         }
       });
-      // 添加侧边栏菜单
+      // 添加侧边栏菜单 用户登陆成功的一些信息写到缓存里面mutaion
       store.commit("saveUserMenuList", userMenuList);
       // 添加菜单到路由
       router.addRoutes(userMenuList);

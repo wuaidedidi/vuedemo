@@ -40,6 +40,7 @@
 </template>
 
 <style scoped>
+/*为非元素指定样式*/
 .side-nav-bar:not(.el-menu--collapse) {
   width: 210px;
 }

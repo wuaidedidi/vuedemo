@@ -22,6 +22,7 @@ const router = createRouter();
 
 export function resetRouter() {
   const newRouter = createRouter();
+  //实际中路由会用match进行匹配，所以新的router需要启用新的match
   router.matcher = newRouter.matcher;
 }
 

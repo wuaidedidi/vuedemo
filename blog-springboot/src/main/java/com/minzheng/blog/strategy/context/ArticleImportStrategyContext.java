@@ -20,6 +20,10 @@ public class ArticleImportStrategyContext {
     private Map<String, ArticleImportStrategy> articleImportStrategyMap;
 
     public void importArticles(MultipartFile file, String type) {
+       //用map装载 key和策略  根据前端选择上传类型  给予相对应的策略实现类
+        //获取ArticleImportStrategy实现类,并使用导入articles方法
+        String demo=MarkdownTypeEnum.getMarkdownType(type);
+        System.out.println(demo);
         articleImportStrategyMap.get(MarkdownTypeEnum.getMarkdownType(type)).importArticles(file);
     }
 }

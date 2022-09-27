@@ -2,23 +2,33 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
+//vuetify vuetify作为ui系统
 import vuetify from "./plugins/vuetify";
+//使用anmiated动画
 import animated from "animate.css";
 import "./assets/css/index.css";
 import "./assets/css/iconfont.css";
 import "./assets/css/markdown.css";
 import "./assets/css/vue-social-share/client.css";
 import config from "./assets/js/config";
+//vue分享图标的插件,比如说qq转发 之类的
 import Share from "vue-social-share";
+//日期vue插件
 import dayjs from "dayjs";
+//弹幕插件
 import { vueBaberrage } from "vue-baberrage";
 import axios from "axios";
 import VueAxios from "vue-axios";
+//下拉加载，往下拉才加载多余的页面
 import InfiniteLoading from "vue-infinite-loading";
+//代码高亮显示
 import "highlight.js/styles/atom-one-dark.css";
+//图片预览插件
 import VueImageSwipe from "vue-image-swipe";
 import "vue-image-swipe/dist/vue-image-swipe.css";
+//vuetify 的消息弹出框
 import Toast from "./components/toast/index";
+//加载栏插件
 import NProgress from "nprogress";
 import "nprogress/nprogress.css";
 

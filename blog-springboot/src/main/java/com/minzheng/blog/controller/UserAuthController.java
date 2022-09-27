@@ -109,16 +109,7 @@ public class UserAuthController {
 
     /**
      * 微博登录
-     *
-     * @param weiBoLoginVO 微博登录信息
-     * @return {@link Result<UserInfoDTO>} 用户信息
-     */
-    @ApiOperation(value = "微博登录")
-    @PostMapping("/users/oauth/weibo")
-    public Result<UserInfoDTO> weiboLogin(@Valid @RequestBody WeiboLoginVO weiBoLoginVO) {
-        return Result.ok(userAuthService.weiboLogin(weiBoLoginVO));
-    }
-
+     *api
     /**
      * qq登录
      *

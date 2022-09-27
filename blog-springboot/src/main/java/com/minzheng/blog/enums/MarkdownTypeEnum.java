@@ -31,7 +31,13 @@ public enum MarkdownTypeEnum {
      */
     private final String strategy;
 
+    /**
+     * 判断markdown上传的类型
+     * @param name
+     * @return
+     */
     public static String getMarkdownType(String name) {
+        //如果没有指定类型，直接返回普通实现
         if (name == null) {
             return NORMAL.getStrategy();
         }

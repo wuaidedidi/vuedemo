@@ -35,6 +35,7 @@ public class ArticleVO {
     @ApiModelProperty(name = "articleTitle", value = "文章标题", required = true, dataType = "String")
     private String articleTitle;
 
+
     /**
      * 内容
      */

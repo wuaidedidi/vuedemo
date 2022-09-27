@@ -38,6 +38,7 @@ export default {
 </script>
 
 <style scoped>
+/*设置margin-left动画时间*/
 .main-container {
   transition: margin-left 0.45s;
   margin-left: 210px;
@@ -46,10 +47,15 @@ export default {
 .hideSideBar {
   margin-left: 64px;
 }
+/**
+
+ */
+/*转场动画的时间*/
 .fade-transform-enter-active,
 .fade-transform-leave-active {
   transition: all 0.5s ease 0s;
 }
+/*加载路由页面时候的闪缩现象*/
 .fade-transform-enter {
   opacity: 0;
   transform: translateX(-30px);

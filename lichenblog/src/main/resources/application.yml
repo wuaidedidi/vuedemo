@@ -1,0 +1,47 @@
+# ����mysql���ݿ�
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.2.2:3306/blog?serverTimezone=Asia/Shanghai&allowMultiQueries=true
+    username: root
+    password: 123456
+    hikari:
+      minimum-idle: 5
+      # �������Ӵ�����ʱ�䣬Ĭ��600000��10���ӣ�
+      idle-timeout: 180000
+      # ���ӳ������������Ĭ����10
+      maximum-pool-size: 10
+      # �����Կ��ƴӳط��ص����ӵ�Ĭ���Զ��ύ��Ϊ,Ĭ��ֵ��true
+      auto-commit: true
+      # ���ӳ�����
+      pool-name: MyHikariCP
+      # �����Կ��Ƴ������ӵ���������ڣ�ֵ0��ʾ�����������ڣ�Ĭ��1800000��30����
+      max-lifetime: 1800000
+      # ���ݿ����ӳ�ʱʱ��,Ĭ��30�룬��30000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+  redis:
+    host: 192.168.2.2
+    port: 6379
+    password: 123456
+server:
+  port: 8087
+  servlet:
+    session:
+      timeout: 21600
+mybatis-plus:
+  mapper-locations: classpath:mapper/*/*.xml
+
+
+
+# 上传模式 可选 oss或local  （http://和最后的/一定不能去！！！）
+upload:
+  path: /E:/test/
+  url: /imageFiles/
+  mode: local
+  local:
+    # nginx映射本地文件路径，无域名则为 ip:83
+    url: http://E:/test/
+    # 本地文件存储路径
+    path: /usr/local/upload/

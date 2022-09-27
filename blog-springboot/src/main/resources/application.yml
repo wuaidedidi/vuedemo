@@ -1,4 +1,4 @@
-# 配置端口
+  # 配置端口
 server:
   port: 8080
   servlet:
@@ -10,9 +10,9 @@ spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://你的ip:3306/blog?serverTimezone=Asia/Shanghai&allowMultiQueries=true
-    username: MYSQL用户名
-    password: MYSQL密码
+    url: jdbc:mysql://192.168.2.2:3306/blog?serverTimezone=Asia/Shanghai&allowMultiQueries=true
+    username: root
+    password: 123456
     hikari:
       minimum-idle: 5
       # 空闲连接存活最大时间，默认600000（10分钟）
@@ -30,15 +30,15 @@ spring:
       connection-test-query: SELECT 1
   # redis配置
   redis:
-    host: 你的ip
+    host: 192.168.2.2
     port: 6379
-    password: Redis密码
+    password: 123456
   # mq配置
   rabbitmq:
-    host: 你的ip
+    host: 192.168.2.2
     port: 5672
-    username: rabbitmq用户名
-    password: rabbitmq密码
+    username: guest
+    password: guest
     listener:
       simple:
         retry:
@@ -85,9 +85,9 @@ upload:
   mode: local
   local:
     # nginx映射本地文件路径，无域名则为 ip:83
-    url: http://你的文件上传子域名/
+    url: http://localhost:${server.port}/imageFiles/
     # 本地文件存储路径
-    path: /usr/local/upload/
+    path: /E:/test/
   oss:
     url: http://Bucket域名/
     endpoint: OSS配置endpoint

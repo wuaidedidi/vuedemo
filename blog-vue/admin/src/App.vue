@@ -6,6 +6,7 @@
 
 <script>
 import { generaMenu } from "./assets/js/menu";
+//export default相当于vue子组件
 export default {
   created() {
     // 刷新页面查询用户菜单

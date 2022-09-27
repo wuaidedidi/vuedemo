@@ -3,8 +3,10 @@ body {
   margin: 0;
 }
 html{
+    font-size: 16px;
   scroll-behavior: smooth;
 }
+/**el-card全局去阴影*/
 .el-card.is-always-shadow,
 .el-card.is-hover-shadow:focus,
 .el-card.is-hover-shadow:hover {

@@ -1,5 +1,6 @@
 package com.minzheng.blog.strategy.context;
 
+import com.minzheng.blog.enums.UploadModeEnum;
 import com.minzheng.blog.strategy.UploadStrategy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

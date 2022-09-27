@@ -39,6 +39,7 @@ public class LocalUploadStrategyImpl extends AbstractUploadStrategyImpl {
     public void upload(String path, String fileName, InputStream inputStream) throws IOException {
         // 判断目录是否存在
         File directory = new File(localPath + path);
+        System.out.println("------------------"+directory+"-----------------------");
         if (!directory.exists()) {
             if (!directory.mkdirs()) {
                 throw new BizException("创建目录失败");

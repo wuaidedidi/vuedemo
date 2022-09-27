@@ -1,5 +1,5 @@
 module.exports = {
-  productionSourceMap: false,
+  productionSourceMap: false,//查看打包之后错误提示的工具
   devServer: {
     proxy: {
       "/api": {
@@ -10,6 +10,7 @@ module.exports = {
         }
       }
     },
+    //关闭请求检查
     disableHostCheck: true
   },
   chainWebpack: config => {

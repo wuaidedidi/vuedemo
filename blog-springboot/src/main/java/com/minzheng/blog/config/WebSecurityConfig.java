@@ -54,7 +54,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         return new SessionRegistryImpl();
     }
 
-    @Bean
+    @Bean//验证重复登陆
     public HttpSessionEventPublisher httpSessionEventPublisher() {
         return new HttpSessionEventPublisher();
     }
@@ -65,6 +65,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
      * @return {@link PasswordEncoder} 加密方式
      */
     @Bean
+    //自带的加密方式BCryptPasswordEncoder
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
